@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "East Sea Dokdo", cursive;
+    background-image: url(image/digimon.webp);
+  }
+
+  .container {
+    width : 50%;
+    border: 10px solid white;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(247, 243, 242, 0.7);
+  }
+
+  #result-area, #chance-area {
+    margin-top : -30px;
+    font-size: 2.5vw;
+  }
+  .button-style {
+    height: 80px;
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 30px;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+  
+  .pre-title {
+    margin-top: -5px;
+    margin-bottom: 1px;
+    font-size: 4vw;
+    font-weight: bold;
+    color: blue;
+  }
+
+  .title {
+    margin-top: -30px;
+    margin-bottom: 10px;
+    font-size: 5vw;
+    font-weight: bold;
+  }
+
+  .main-img {
+    margin-bottom: -50px;
+    width: 30vw;
+    height: 30vh
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  .blue-text {
+    color: blue;
+  }
+
+  .magenta-text {
+    color: magenta;
+  }
+
+  .form-control {
+    height: 60px;
+  
+    font-size: 2vw;
+    margin-right: 20px;
+  }
+
+
+/* Hover 버튼 */
+  
+.btn {
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #222;
+    padding: 17px 60px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  }
+  
+  .btn span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #78c7d2;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
+
+
+/* hover 2 */
+
+.hover-btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.hover-btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+  .hover-btn-hover.color-pink {
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.hover-btn-hover.color-navy {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
