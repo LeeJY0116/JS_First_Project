@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 body {
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -21,17 +21,16 @@ body {
   }
 
   #result-area, #chance-area {
-    /* margin-top : -30px; */
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
-  .button-style {
+  /* .button-style {
     height: 80px;
     width: 100px;
     margin-top: 5px;
     border-radius: 30px;
     font-size: 20pt;
     font-weight: bold;
-  }
+  } */
   
   .pre-title {
     /* margin-top: -5px; */
@@ -51,7 +50,7 @@ body {
   .main-img {
     /* margin-bottom: -50px; */
     width: 30vw;
-    height: 30vh
+    height: 25vh
   }
 
   .red-text {
@@ -67,8 +66,8 @@ body {
   }
 
   .form-control {
+    position:absolute;
     height: 60px;
-  
     font-size: 2vw;
     margin-right: 20px;
   }
@@ -77,6 +76,7 @@ body {
 /* Hover 버튼 */
   
 .btn {
+    margin-left : 500px;
     border: none;
     text-align: center;
     cursor: pointer;
