@@ -76,7 +76,6 @@ body {
 /* Hover 버튼 */
   
 .btn {
-    margin-left : 200px;
     border: none;
     text-align: center;
     cursor: pointer;
@@ -153,3 +152,29 @@ box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
 .hover-btn-hover.color-navy {
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+
+    
+@media screen and (max-width: 48rem) {
+  .pre-title {
+    font-size: 10vw;
+  }
+  .title {
+    font-size: 12vw;
+  }
+  .sub-title {
+    font-size: 11vw;
+  }
+  .form-control {
+    font-size: 8vw;
+    max-width: 500px;
+    margin-right: 0px;
+  }
+  .main-img {
+    width: 40vw;
+  }
+  #reset-button #result-button {
+    font-size: 5vw;
+    width: 80px;
+    height: 60px;
+  }
+}
