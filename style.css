@@ -21,7 +21,7 @@ body {
   }
 
   #result-area, #chance-area {
-    margin-top : -30px;
+    /* margin-top : -30px; */
     font-size: 2.5vw;
   }
   .button-style {
@@ -34,22 +34,22 @@ body {
   }
   
   .pre-title {
-    margin-top: -5px;
-    margin-bottom: 1px;
+    /* margin-top: -5px; */
+    /* margin-bottom: 1px; */
     font-size: 4vw;
     font-weight: bold;
     color: blue;
   }
 
   .title {
-    margin-top: -30px;
-    margin-bottom: 10px;
+    /* margin-top: -30px; */
+    /* margin-bottom: 10px; */
     font-size: 5vw;
     font-weight: bold;
   }
 
   .main-img {
-    margin-bottom: -50px;
+    /* margin-bottom: -50px; */
     width: 30vw;
     height: 30vh
   }
