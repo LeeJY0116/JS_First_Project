@@ -31,7 +31,7 @@ function pickRandomNum(){
     // 랜덤숫자 뽑기 
 
     computerNum = Math.floor(Math.random() * 100)+1;
-    console.log("정답", computerNum);
+    // console.log("정답", computerNum);
 }
 
 function play(){
@@ -51,6 +51,7 @@ function play(){
     chances -- ;
     chanceArea.innerHTML = `남은 기회 : ${chances}번`;
     history.push(userValue)
+    chanceArea.innerHTML = `입력한 숫자 : ${history}`;
     if(userValue < computerNum) {
         resultAreaImg.src =
         "https://media0.giphy.com/media/3ov9jExd1Qbwecoqsg/200.gif";
