@@ -71,6 +71,9 @@ function play(){
     }
 
     if(gameOver == true){
+        resultAreaImg.src =
+        "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWg0dWtrczVwdG5mcmtudjF5cHppcGNma2QyODFzY25ueXQ5bGEzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eJ4j2VnYOZU8qJU3Py/giphy.gif"
+        resultText.textContent = "탈 락 탈 락"
         playButton.disabled = true;
     }
 }
