@@ -16,8 +16,11 @@ let resultText = document.querySelector(".result-text");
 let resetButton = document.getElementById("reset-button");
 let resultButton = document.getElementById("result-button");
 let chanceArea = document.getElementById("chance-area");
-let chances = 5; // 남은 기회
+let levelArea = document.getElementById("level-area");
+let inputArea = document.getElementById("input-area");
+chances;
 let gameOver = false;
+let gameClear = false;
 let history = []; // 유저가 입력한 기록
 
 chanceArea.innerHTML = `남은 기회 : ${chances}번`;
@@ -48,10 +51,8 @@ function play(){
         return;
     }
 
-    chances -- ;
-    chanceArea.innerHTML = `남은 기회 : ${chances}번`;
     history.push(userValue)
-    chanceArea.innerHTML = `입력한 숫자 : ${history}`;
+    inputArea.innerHTML = `입력한 숫자 : ${history}`;
     if(userValue < computerNum) {
         resultAreaImg.src =
         "https://media0.giphy.com/media/3ov9jExd1Qbwecoqsg/200.gif";
@@ -60,20 +61,24 @@ function play(){
         resultAreaImg.src ="https://media.giphy.com/media/r2puuhrnjG7vy/giphy.gif";
         resultText.textContent = "DOWN!!!"
     }else {
+        gameClear=true;
+    }
+    chances -- ;
+    chanceArea.innerHTML = `남은 기회 : ${chances}번`;
+
+
+    if(gameClear == true){
         resultAreaImg.src ="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3RnejRnNzVkdWpkaXB1N2twMHgyZnJrYmY5eXdkc3FzdGpqNGt0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YTbZzCkRQCEJa/giphy.gif";
         resultText.textContent = "맞췄습니다!!!"
-        gameOver = true;
+        playButton.disabled = true;
     }
-
-
-    if(chances < 1 ){
+    if(chances < 1 & gameClear==false){
         gameOver=true;
     }
-
     if(gameOver == true){
         resultAreaImg.src =
         "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWg0dWtrczVwdG5mcmtudjF5cHppcGNma2QyODFzY25ueXQ5bGEzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eJ4j2VnYOZU8qJU3Py/giphy.gif"
-        resultText.textContent = "탈 락 탈 락"
+        resultText.textContent = `탈 락 탈 락`
         playButton.disabled = true;
     }
 }
@@ -81,14 +86,27 @@ function play(){
 function reset(){
     // user input창이 깨끗하게 정리되고
     userInput.value = "";
+    history = [];
     // 새로운 번호가 생성이 되고
     pickRandomNum();
     resultAreaImg.src =
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY2cmtiamt6MGtpenRpbzRpb3doYmx0MGExZXVndmM1N2MwbmNvdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4ATNcOi0lbg1a/giphy.gif";
-    chances = 5;
+    gameClear = false;
     gameOver = false;
+    if(level =='EASY')
+    {
+        chances = easychances;
+    }
+    else if(level =="NORMAL")
+    {
+        chances = normalchances;
+    }
+    else{
+        chances = hardchances;
+    }
     playButton.disabled = false;
     chanceArea.innerHTML = `남은 기회 : ${chances}번`;
+    inputArea.innerHTML = `입력한 숫자 :`
 
     resultText.textContent = "1 ~ 100까지 숫자를 맞춰보세요."
 }

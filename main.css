@@ -1,26 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+#main {
+  display:none;
+}
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "East Sea Dokdo", cursive;
-    background-image: url(image/digimon.webp);
-  }
+  display:none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "East Sea Dokdo", cursive;
+  /* background-image: url(image/digimon.webp); */
+}
 
   .container {
-    width : 50%;
+    width :100%;
     border: 10px solid white;
     border-radius: 20px;
     text-align: center;
     background-color: rgba(247, 243, 242, 0.7);
   }
 
-  #result-area, #chance-area {
+  h2 {
     font-size: 2vw;
   }
   /* .button-style {
@@ -145,6 +149,8 @@ body {
 }
 
   .hover-btn-hover.color-pink {
+    display : inline-block;
+    text-align : center;
     background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
 box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
 }
@@ -152,10 +158,16 @@ box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
 .hover-btn-hover.color-navy {
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
 
-    
+
+
 @media screen and (max-width: 48rem) {
- 
+
+  body {
+    background-size : cover;
+    display : flex;
+  }
   .pre-title {
     font-size: 10vw;
   }

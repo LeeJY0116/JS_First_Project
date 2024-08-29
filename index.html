@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- <script>
+        let chances = 5;
+    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숫자 UP & DOWN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="animation.css">
 </head>
 
 
-<body>
-    <div class="justify-content-center container">
-        <h1 class="pre-title">JS 첫번째 프로젝트</h1>
-        <h1 class="title">숫자 <span class="red-text">UP</span> <span class="magenta-text">&</span> <span class="blue-text">DOWN</span></h1>
-        <div id="result-area">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY2cmtiamt6MGtpenRpbzRpb3doYmx0MGExZXVndmM1N2MwbmNvdyZlcD
-            12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4ATNcOi0lbg1a/giphy.gif" class="main-img" id="main-img">
-            <h1 class="result-text">1 ~ 100까지 숫자를 맞춰보세요.</h1>
+<body id ="body">
+    <section id = "start">
+        <div>
+            <h1>시작화면</h1>
+            <h2>난이도</h2>
+            <a href="#" onclick="js:easy()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                EASY
+            </a>
+            <a href="#" onclick="js:normal()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                NORMAL
+            </a>
+            <a href="#" onclick="js:hard()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                HARD
+            </a>
         </div>
-        <h2 id="chance-area">남은 기회 : </h2>
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-6">
-                <input type="number" id="user-input" class="form-control md-10" placeholder="1 ~ 100 사이 숫자를 입력"/>
-                <button class="btn" id="play-button"><span>Go!!</span></button> 
+    </section>
+    <section id = "main">
+        <div class="justify-content-center container">
+            <h1 class="pre-title">JS 첫번째 프로젝트</h1>
+            <h1 class="title">숫자 <span class="red-text">UP</span> <span class="magenta-text">&</span> <span class="blue-text">DOWN</span></h1>
+            <div id="result-area">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY2cmtiamt6MGtpenRpbzRpb3doYmx0MGExZXVndmM1N2MwbmNvdyZlcD
+                12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4ATNcOi0lbg1a/giphy.gif" class="main-img" id="main-img">
+                <h1 class="result-text">1 ~ 100까지 숫자를 맞춰보세요.</h1>
+            </div>
+            <h2 id="level-area">난이도 : </h2>
+            <h2 id="chance-area">남은 기회 : </h2>
+            <h2 id="input-area">입력한 숫자 : </h2>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <input type="number" id="user-input" class="form-control md-10" placeholder="1 ~ 100 사이 숫자를 입력"/>
+                    <button class="btn" id="play-button"><span>Go!!</span></button> 
+                </div>
+            </div>
+            <div>
+                <button class="hover-btn-hover color-pink" id="result-button">정답 확인</button>
+                <button class="hover-btn-hover color-navy" id="reset-button">Reset !</button>
             </div>
         </div>
-    </div>
-    <div>
-    <button class="hover-btn-hover color-pink" id="result-button">정답 확인</button>
-    <button class="hover-btn-hover color-navy" id="reset-button">Reset !</button>
-    </div>
+    </section>
+    <script src="start.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
