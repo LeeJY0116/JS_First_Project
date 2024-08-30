@@ -95,6 +95,7 @@ function reset(){
     gameOver = false;
     if(level =='EASY')
     {
+        resultAreaImg.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHBvM2F0Y3h5c3k1aXBiYWp5amxrYnBzaTdza25zMXIxZnpkeHUzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5AoJQ2Mg732Ug/giphy.gif";
         chances = easychances;
     }
     else if(level =="NORMAL")
@@ -102,6 +103,7 @@ function reset(){
         chances = normalchances;
     }
     else{
+        resultAreaImg.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTAzYm5kaTI0aXdzNG9sMWJ0d2M3dTI5azVrb3FsbHhnZHdsNWUzNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zPbnEgxsPJOJSD3qfr/giphy.gif"
         chances = hardchances;
     }
     playButton.disabled = false;
