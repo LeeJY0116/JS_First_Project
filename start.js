@@ -56,6 +56,7 @@ function begin(){
             {
                 resultAreaImg.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHBvM2F0Y3h5c3k1aXBiYWp5amxrYnBzaTdza25zMXIxZnpkeHUzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5AoJQ2Mg732Ug/giphy.gif";
                 body.style.background = "url(image/digimon.webp)";
+                body.style.backgroundPosition = "center";
                 body.style.backgroundSize = "cover";
             }
             else if(level =='NORMAL')
@@ -68,6 +69,7 @@ function begin(){
             {
                 resultAreaImg.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTAzYm5kaTI0aXdzNG9sMWJ0d2M3dTI5azVrb3FsbHhnZHdsNWUzNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zPbnEgxsPJOJSD3qfr/giphy.gif"
                 body.style.background = "url(image/devil.jpg)";
+                body.style.backgroundPosition = "center";
                 body.style.backgroundSize = "cover";
             }
         }, 450)

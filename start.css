@@ -235,3 +235,20 @@ a span:nth-child(4){
     0 0 50px red,
     0 0 200px red;
 }
+
+  @media screen and (max-width: 768px) {
+
+    body {
+      background-size : cover;
+      display : flex;
+    }
+    #level-select {
+      font-size: 12vw;
+    }
+    .title span{
+      font-size: 4vw;
+    }
+    a {
+      font-size: 12vw;
+    }
+  }

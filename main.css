@@ -150,9 +150,10 @@ box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
 
 
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
 
   body {
+    background-position : center;
     background-size : cover;
     display : flex;
   }
