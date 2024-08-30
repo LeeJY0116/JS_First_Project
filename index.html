@@ -20,29 +20,32 @@
 <body id ="body">
     <section id = "start">
         <div>
-            <h1>시작화면</h1>
-            <h2>난이도</h2>
-            <a href="#" onclick="js:easy()">
+            <h1 class = "title"><span data-text="Guessing Numbers!">Guessing Numbers!</span></h1>
+            <div class = "select-level">
+                <button id = "level-select" onclick="js:levelSelect()">Level</button></div>
+            <div id = "level-option" class="level">
+            <a id = "level-easy" href="#" onclick="js:easy()">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 EASY
             </a>
-            <a href="#" onclick="js:normal()">
+            <a id = "level-normal" href="#" onclick="js:normal()">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 NORMAL
             </a>
-            <a href="#" onclick="js:hard()">
+            <a id = "level-hard" href="#" onclick="js:hard()">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 HARD
             </a>
+            </div>
         </div>
     </section>
     <section id = "main">

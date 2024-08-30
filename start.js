@@ -1,11 +1,33 @@
 const start = document.querySelector("#start");
 const main = document.querySelector("#main");
+const levelEasy = document.querySelector("#level-easy")
+const levelNormal = document.querySelector("#level-normal")
+const levelHard = document.querySelector("#level-hard")
 let body = document.querySelector("#body")
 let chances = 0;
 let level = "";
 easychances = 10;
 normalchances = 5;
 hardchances = 3;
+
+function levelSelect(){
+    setTimeout(() => {
+        levelEasy.style.WebkitAnimation = "fadeIn 1s";
+        levelEasy.style.animation = "fadeIn 1s";
+        levelEasy.style.display = "block";
+        setTimeout(() => {
+            levelNormal.style.WebkitAnimation = "fadeIn 1s";
+            levelNormal.style.animation = "fadeIn 1s";
+            levelNormal.style.display = "block";
+        setTimeout(() => {
+            levelHard.style.WebkitAnimation = "fadeIn 1s";
+            levelHard.style.animation = "fadeIn 1s";
+            levelHard.style.display = "block";
+    }, 450)
+    }, 450)
+    }, 450);
+}
+
 function easy(){
     chances=easychances;
     level = "EASY"

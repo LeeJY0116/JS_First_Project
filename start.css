@@ -1,7 +1,29 @@
 #start {
-    display:block;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가로 중앙 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    position: absolute;
+    top: 50%; /* 세로 중앙 */
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /*정확히 중앙에 위치시키기 위해 변환*/
+    font-family: "East Sea Dokdo", cursive;
 }
 
+#start div {
+    text-align: center;
+  }
+  
+  #start h1{
+    margin: 0;
+    padding: 10px;
+    font-size: 3vw; /* 화면 크기에 따라 글자 크기 조정 */
+  }
+  
+  #start .level {
+    font-size: 2vw;
+    border-radius: 10px;
+  }
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 *{
     margin: 0;
@@ -17,27 +39,73 @@ body{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+
+#start .select-level{
+    font-size: 3vw; /* 화면 크기에 따라 글자 크기 조정 */
+    margin: 250px 0 0 0; /*상단에 여백 추가 */
+}
+#level-select{
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 2px white;
+}
+
+/* 타이틀 움직이게 하기 */
+#start .title {
+    color : brown;
+    margin: 1rem;
+    font-weight: 600;
+    border-radius: 17px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow : 0px 0px 100px 4px red;
+  }
+  
+#start .title:hover {
+    transform: scale(1.1);
+  }
+  
+#start .title span {
+    display: block;
+    padding: 0 20px;
+    animation: move-left 15s linear infinite;
+  }
+  
+#start .title span::after {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes move-left {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+
+/* 난이도 버튼 디자인 */
 a{
     position: relative;
     display: inline-block;
     padding: 25px 30px;
     margin: 40px 0;
-    color: #03e9f4;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
-    margin-right: 50px;
    
 }
 a:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 a:nth-child(1){
@@ -55,7 +123,6 @@ a span:nth-child(1){
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg,transparent,#03e9f4);
     animation: animate1 1s linear infinite;
 }
 @keyframes animate1{
@@ -71,7 +138,6 @@ a span:nth-child(2){
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg,transparent,#03e9f4);
   animation: animate2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -90,7 +156,6 @@ a span:nth-child(3){
   right: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg,transparent,#03e9f4);
   animation: animate3 1s linear infinite;
   animation-delay: 0.50s;
 }
@@ -109,7 +174,7 @@ a span:nth-child(4){
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg,transparent,#03e9f4);
+  background: linear-gradient(360deg,transparent);
   animation: animate4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -120,4 +185,53 @@ a span:nth-child(4){
   50%,100%{
       bottom: 100%;
   }
+}
+#level-easy{
+    display : none;
+    color: magenta;
+}
+#level-normal{
+    display: none;
+    color: #03e9f4;
+}
+#level-hard{
+    display: none;
+    color: red;
+}
+
+#level-easy span{
+    background: linear-gradient(360deg,transparent,magenta);
+}
+#level-normal span{
+    background: linear-gradient(360deg,transparent,#03e9f4);
+}
+#level-hard span{
+    background: linear-gradient(360deg,transparent,red);
+}
+
+#level-normal:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+}
+
+#level-easy:hover{
+    background: magenta;
+    color: #050801;
+    box-shadow: 0 0 5px magenta,
+    0 0 25px magenta,
+    0 0 50px magenta,
+    0 0 200px magenta;
+}
+
+#level-hard:hover{
+    background: red;
+    color: #050801;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 200px red;
 }
